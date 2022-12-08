@@ -1,0 +1,17 @@
+{
+    "name": "new-employee-tracker",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "console.table": "^0.10.0",
+        "express": "^4.17.1",
+        "inquirer": "^6.2.1",
+        "mysql": "^2.16.0"
+    }
+}

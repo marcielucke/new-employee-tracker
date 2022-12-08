@@ -178,7 +178,7 @@ function addRole() {
 function addEmployee (){
 
     var roleChoice = [];
-    db.query("SELECT * FROM role", function(err, resRole) {
+    db.query("SELECT id, title, salary, department_id FROM role", function(err, resRole) {
       if (err) throw err;
       for (var i = 0; i < resRole.length; i++) {
         var roleList = resRole[i].title;
@@ -220,8 +220,16 @@ function addEmployee (){
         choices: managerChoice
     }
     ]).then (function(newEmployee){
-       var sql= `INSERT INTO employee(first_name, last_name, role_id, manager_id ) VALUES (?)`;
-       var values = [newEmployee.first, newEmployee.last, roleChoice.id, managerChoice.id];
+
+        var chosenRole;
+        for (var i = 0; i < resRole.length; i++) {
+          if (resRole[i].title === newEmployee.role) {
+            chosenRole = resRole[i];
+          }
+        };
+
+       var sql= `INSERT INTO employee(first_name, last_name, role_id, department_id, manager_id ) VALUES (?)`;
+       var values = [newEmployee.first, newEmployee.last, chosenRole.id, chosenRole.department_id, managerChoice.manager];
        db.query(sql, [values], (err, result) => {
         if (err) {
           console.log(err);
@@ -230,6 +238,6 @@ function addEmployee (){
             startApp();
                     });
     })
-})
+});
 
 };
