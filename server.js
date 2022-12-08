@@ -61,12 +61,18 @@ const db = mysql.createConnection({
             case "add an employee":
                 addEmployee();
                 break;
-            case "EXIT":
-                exitapp();
-                break;
+                case "EXIT":
+                    console.log("Come back soon!")
+                    process.exit();
           }
         });
+
         };
+
+       
+   
+    
+
 
     // write function to view deparments 
 
@@ -237,7 +243,11 @@ function addEmployee (){
         console.log(result);});
             startApp();
                     });
-    })
+    });
+
+ 
 });
+
+
 
 };
