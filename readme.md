@@ -32,6 +32,8 @@ To install my project you will need the following programs!
 
  This project can be installed by cloning my this repository link to your local computer. It will be run from the command line use mysql to source the database, and node to run the server. Below is a video that further describes the usage.
 
+  [Demo Video](https://drive.google.com/file/d/1Mx4v2MS4p1_mqe-GKrp2PWlR8PyhoI2X/view)
+
 
 ## License
 
@@ -41,9 +43,9 @@ N/A
 
 If you have any questions reguarding this project, a separate one, or just want to chat :
 
-Github : [!](marcielucke@github.com)
-LinkedIn : [!](www.linkedin.com/in/marcella-lucke-7465aa198)
-Email : [!](luckemarcella@gmail.com)
+Github : marcielucke@github.com
+LinkedIn : www.linkedin.com/in/marcella-lucke-7465aa198
+Email : luckemarcella@gmail.com
 
 ## Tests
 
